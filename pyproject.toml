@@ -34,9 +34,9 @@ constraint-dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Bl4nk44/plane-ce-mcp"
-Repository = "https://github.com/Bl4nk44/plane-ce-mcp"
-Issues = "https://github.com/Bl4nk44/plane-ce-mcp/issues"
+Homepage = "https://github.com/necro304/plane-ce-mcp"
+Repository = "https://github.com/necro304/plane-ce-mcp"
+Issues = "https://github.com/necro304/plane-ce-mcp/issues"
 
 [project.optional-dependencies]
 dev = [

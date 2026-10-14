@@ -1,5 +1,23 @@
 # plane-ce-mcp
 
+## Recovered source
+
+This repository restores version **1.1.0** from the
+[PyPI source distribution](https://pypi.org/project/plane-ce-mcp/1.1.0/#files),
+downloaded on **2026-10-14**, after the original
+[Bl4nk44/plane-ce-mcp repository](https://github.com/Bl4nk44/plane-ce-mcp)
+became unavailable. The Python source, tests, author credits, and MIT license
+are preserved. This copy does not include the original Git history.
+
+Source archive: `plane_ce_mcp-1.1.0.tar.gz`
+
+Verified SHA-256: `0b17ab754424a0066644c9c2b34a097de73085940819e385a9f78cdc4921929b`
+
+The source distribution omits `docs/`, `deploy/`, `scripts/`, `.github/`, and
+`.env.test`. References to these files in the original documentation below
+cannot be followed in this recovered copy. Installation examples point to this
+repository; no runtime code has been changed.
+
 **Unofficial MCP server for self-hosted Plane (Community Edition).**
 
 A Model Context Protocol server exposing Plane's project management API as MCP tools,
@@ -44,7 +62,7 @@ install - `uvx` runs the server straight from GitHub.
 PLANE_API_KEY=<your-api-key> \
 PLANE_WORKSPACE_SLUG=<your-workspace-slug> \
 PLANE_BASE_URL=https://plane.your-domain.tld \
-uvx --from git+https://github.com/Bl4nk44/plane-ce-mcp plane-ce-mcp stdio
+uvx --from git+https://github.com/necro304/plane-ce-mcp plane-ce-mcp stdio
 ```
 
 Server starts and waits for MCP messages on stdin - Ctrl+C to exit. Errors at this
@@ -57,7 +75,7 @@ point mean wrong URL or key, not a client problem.
   "mcpServers": {
     "plane": {
       "command": "uvx",
-      "args": ["--from", "git+https://github.com/Bl4nk44/plane-ce-mcp", "plane-ce-mcp", "stdio"],
+      "args": ["--from", "git+https://github.com/necro304/plane-ce-mcp", "plane-ce-mcp", "stdio"],
       "env": {
         "PLANE_API_KEY": "<your-api-key>",
         "PLANE_WORKSPACE_SLUG": "<your-workspace-slug>",
@@ -75,7 +93,7 @@ claude mcp add plane \
   -e PLANE_API_KEY=<your-api-key> \
   -e PLANE_WORKSPACE_SLUG=<your-workspace-slug> \
   -e PLANE_BASE_URL=https://plane.your-domain.tld \
-  -- uvx --from git+https://github.com/Bl4nk44/plane-ce-mcp plane-ce-mcp stdio
+  -- uvx --from git+https://github.com/necro304/plane-ce-mcp plane-ce-mcp stdio
 ```
 
 `PLANE_BASE_URL` must point at your instance's API - the default is Plane Cloud
@@ -84,7 +102,7 @@ claude mcp add plane \
 ### Run from source
 
 ```bash
-git clone https://github.com/Bl4nk44/plane-ce-mcp.git
+git clone https://github.com/necro304/plane-ce-mcp.git
 cd plane-ce-mcp
 uv pip install -e .
 PLANE_API_KEY=... PLANE_WORKSPACE_SLUG=... PLANE_BASE_URL=... python -m plane_mcp stdio
